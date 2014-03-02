@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="GroupCreationTests (1)" project="Adressbook-test" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.example.tests.GroupCreationTests" time="10.326">
+    <testcase name="testEmptyGroupCreation" classname="com.example.tests.GroupCreationTests" time="6.729"/>
+    <testcase name="testNonEmptyGroupCreation" classname="com.example.tests.GroupCreationTests" time="3.597"/>
+  </testsuite>
+</testrun>
