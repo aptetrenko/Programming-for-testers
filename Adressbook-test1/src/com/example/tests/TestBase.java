@@ -106,66 +106,82 @@ public class TestBase {
 		driver.findElement(By.name("submit")).click();
 	}
 
-	protected void enterSecondaryPhone() {
+	protected void enterSecondaryPhone(ContactData contact) {
 		driver.findElement(By.name("phone2")).clear();
-	    driver.findElement(By.name("phone2")).sendKeys("44");
+	    driver.findElement(By.name("phone2")).sendKeys(contact.secondaryPhone);
 	}
 
-	protected void enterSecondaryAdress() {
+	protected void enterSecondaryAdress(ContactData contact) {
 		driver.findElement(By.name("address2")).clear();
-	    driver.findElement(By.name("address2")).sendKeys("Nikopol");
+	    driver.findElement(By.name("address2")).sendKeys(contact.secondaryAdress);
 	}
 
-	protected void selectYourGroup() {
-		new Select(driver.findElement(By.name("new_group"))).selectByVisibleText("Rob");
+	protected void selectYourGroup(ContactData contact) {
+		new Select(driver.findElement(By.name("new_group"))).selectByVisibleText(contact.yourGroup);
 	}
 
-	protected void selectBirthday() {
-		new Select(driver.findElement(By.name("bday"))).selectByVisibleText("3");
+	protected void selectBirthday(ContactData contact) {
+		new Select(driver.findElement(By.name("bday"))).selectByVisibleText(contact.birthday);
 	    new Select(driver.findElement(By.name("bmonth"))).selectByVisibleText("April");
 	    driver.findElement(By.name("byear")).clear();
 	    driver.findElement(By.name("byear")).sendKeys("1988");
 	}
 
-	protected void enterSecondEmail() {
+	protected void enterSecondEmail(ContactData contact) {
 		driver.findElement(By.name("email2")).clear();
-	    driver.findElement(By.name("email2")).sendKeys("email2@gmail.com");
+	    driver.findElement(By.name("email2")).sendKeys(contact.secondEmail);
 	}
 
-	protected void enterFirstEmail() {
+	protected void enterFirstEmail(ContactData contact) {
 		driver.findElement(By.name("email")).clear();
-	    driver.findElement(By.name("email")).sendKeys("email1@gmail.com");
+	    driver.findElement(By.name("email")).sendKeys(contact.firstEmail);
 	}
 
-	protected void enterWorkPhone() {
+	protected void enterWorkPhone(ContactData contact) {
 		driver.findElement(By.name("work")).clear();
-	    driver.findElement(By.name("work")).sendKeys("44223");
+	    driver.findElement(By.name("work")).sendKeys(contact.workPhone);
 	}
 
-	protected void enterMobilePhone() {
+	protected void enterMobilePhone(ContactData contact) {
 		driver.findElement(By.name("mobile")).clear();
-	    driver.findElement(By.name("mobile")).sendKeys("44222");
+	    driver.findElement(By.name("mobile")).sendKeys(contact.mobilePhone);
 	}
 
-	protected void enterHomePhone() {
+	protected void enterHomePhone(ContactData contact) {
 		driver.findElement(By.name("home")).clear();
-	    driver.findElement(By.name("home")).sendKeys("44221");
+	    driver.findElement(By.name("home")).sendKeys(contact.homePhone);
 	}
 
-	protected void enterAdress() {
+	protected void enterAdress(String adress) {
 		driver.findElement(By.name("address")).clear();
-	    driver.findElement(By.name("address")).sendKeys("Dnepr");
+	    driver.findElement(By.name("address")).sendKeys(adress);
 	}
 
-	protected void fillFullName(FullNameData name) {
+	protected void fillFullName(ContactData contact) {
 		driver.findElement(By.name("firstname")).clear();
-	    driver.findElement(By.name("firstname")).sendKeys(name.firstname);
+	    driver.findElement(By.name("firstname")).sendKeys(contact.firstname);
 	    driver.findElement(By.name("lastname")).clear();
-	    driver.findElement(By.name("lastname")).sendKeys(name.secondname);
+	    driver.findElement(By.name("lastname")).sendKeys(contact.secondname);
 	}
 
 	protected void openContactsPage() {
 		driver.findElement(By.linkText("add new")).click();
+	}
+
+	protected void fillContacForm(ContactData contact) {
+		fillFullName(contact);
+		enterAdress(contact.adress);
+	    enterHomePhone(contact);
+	    enterMobilePhone(contact);
+	    enterWorkPhone(contact);
+	    enterFirstEmail(contact);
+	    enterSecondEmail(contact);
+	    selectBirthday(contact);
+	    selectYourGroup(contact);
+	    enterSecondaryAdress(contact);
+	    enterSecondaryPhone(contact);
+	    
+	    
 	}
 
 }

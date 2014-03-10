@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="11793" started-at="2014-03-10T22:14:35Z" finished-at="2014-03-10T22:14:47Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="11793" started-at="2014-03-10T22:14:35Z" finished-at="2014-03-10T22:14:47Z">
+      <class name="com.example.tests.ContactCreationTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactCreationTests@2cce3e17]" name="setUp" is-config="true" duration-ms="9926" started-at="2014-03-11T00:14:35Z" finished-at="2014-03-11T00:14:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testContactData()[pri:0, instance:com.example.tests.ContactCreationTests@2cce3e17]" name="testContactData" duration-ms="1698" started-at="2014-03-11T00:14:45Z" finished-at="2014-03-11T00:14:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testContactData -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactCreationTests@2cce3e17]" name="tearDown" is-config="true" duration-ms="160" started-at="2014-03-11T00:14:47Z" finished-at="2014-03-11T00:14:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.example.tests.ContactCreationTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

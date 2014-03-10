@@ -1,0 +1,24 @@
+package com.example.tests;
+
+import org.testng.annotations.Test;
+
+public class ContactCreationTests extends TestBase{
+  @Test
+  public void testContactData() throws Exception {
+    openMainPage();
+    openContactsPage();
+    
+    
+    ContactData name = new ContactData("alex", "petrenko");
+   	//fillFullName(name);
+   	
+    fillContacForm(name);
+    
+    
+    
+    
+    
+    
+    returnToHomePage();
+  }
+}

@@ -1,0 +1,7 @@
+1394482417199	Extract method 'fillContacForm'
+1394482456660	Pull up 'fillContacForm()' to 'TestBase'
+1394483280675	Rename type 'FullNameData'
+1394483330936	Rename local variable 'name'
+1394483340949	Rename local variable 'conact'
+1394483420554	Rename local variable 'name'
+1394483859429	Rename local variable 'name'
