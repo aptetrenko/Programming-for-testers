@@ -121,7 +121,7 @@ public class TestBase {
 	}
 
 	protected void selectBirthday(ContactData contact) {
-		String[] parts = contact.birthday.split("/");
+		String[] parts = contact.birthday.split('/');
 		new Select(driver.findElement(By.name("bday"))).selectByVisibleText(parts[0]);
 	    new Select(driver.findElement(By.name("bmonth"))).selectByVisibleText(parts[1]);
 	    driver.findElement(By.name("byear")).clear();
