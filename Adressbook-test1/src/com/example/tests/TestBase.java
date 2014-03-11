@@ -121,10 +121,11 @@ public class TestBase {
 	}
 
 	protected void selectBirthday(ContactData contact) {
-		new Select(driver.findElement(By.name("bday"))).selectByVisibleText(contact.birthday);
-	    new Select(driver.findElement(By.name("bmonth"))).selectByVisibleText("April");
+		String[] parts = contact.birthday.split('/');
+		new Select(driver.findElement(By.name("bday"))).selectByVisibleText(parts[0]);
+	    new Select(driver.findElement(By.name("bmonth"))).selectByVisibleText(parts[1]);
 	    driver.findElement(By.name("byear")).clear();
-	    driver.findElement(By.name("byear")).sendKeys("1988");
+	    driver.findElement(By.name("byear")).sendKeys(parts[2]);
 	}
 
 	protected void enterSecondEmail(ContactData contact) {
