@@ -10,7 +10,7 @@
 	</section>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
 		<item value="true" key="CreateTopLevel"/>
-		<item value="false" key="CreateGetters"/>
 		<item value="false" key="CreateSetters"/>
+		<item value="false" key="CreateGetters"/>
 	</section>
 </section>
