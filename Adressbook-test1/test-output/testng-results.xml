@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="3" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5913" started-at="2014-03-16T22:10:10Z" finished-at="2014-03-16T22:10:16Z">
+  <suite name="Default suite" duration-ms="11154" started-at="2014-03-17T07:24:22Z" finished-at="2014-03-17T07:24:33Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5913" started-at="2014-03-16T22:10:10Z" finished-at="2014-03-16T22:10:16Z">
+    <test name="Default test" duration-ms="11154" started-at="2014-03-17T07:24:22Z" finished-at="2014-03-17T07:24:33Z">
       <class name="com.example.tests.GroupCreationTests">
-        <test-method status="FAIL" signature="testEmptyGroupCreation()[pri:0, instance:com.example.tests.GroupCreationTests@764985ce]" name="testEmptyGroupCreation" duration-ms="0" started-at="2014-03-17T00:10:16Z" finished-at="2014-03-17T00:10:16Z">
+        <test-method status="FAIL" signature="testEmptyGroupCreation()[pri:0, instance:com.example.tests.GroupCreationTests@54efd40d]" name="testEmptyGroupCreation" duration-ms="0" started-at="2014-03-17T09:24:33Z" finished-at="2014-03-17T09:24:33Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
@@ -42,7 +42,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testEmptyGroupCreation -->
-        <test-method status="FAIL" signature="testNonEmptyGroupCreation()[pri:0, instance:com.example.tests.GroupCreationTests@764985ce]" name="testNonEmptyGroupCreation" duration-ms="0" started-at="2014-03-17T00:10:16Z" finished-at="2014-03-17T00:10:16Z">
+        <test-method status="FAIL" signature="testNonEmptyGroupCreation()[pri:0, instance:com.example.tests.GroupCreationTests@54efd40d]" name="testNonEmptyGroupCreation" duration-ms="1" started-at="2014-03-17T09:24:33Z" finished-at="2014-03-17T09:24:33Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
@@ -79,17 +79,17 @@
         </test-method> <!-- testNonEmptyGroupCreation -->
       </class> <!-- com.example.tests.GroupCreationTests -->
       <class name="com.example.tests.TestBase">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.TestBase@6de40a47]" name="setUp" is-config="true" duration-ms="5807" started-at="2014-03-17T00:10:10Z" finished-at="2014-03-17T00:10:16Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.TestBase@165ef3ae]" name="setUp" is-config="true" duration-ms="11044" started-at="2014-03-17T09:24:22Z" finished-at="2014-03-17T09:24:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.TestBase@6de40a47]" name="tearDown" is-config="true" duration-ms="91" started-at="2014-03-17T00:10:16Z" finished-at="2014-03-17T00:10:16Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.TestBase@165ef3ae]" name="tearDown" is-config="true" duration-ms="94" started-at="2014-03-17T09:24:33Z" finished-at="2014-03-17T09:24:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.example.tests.TestBase -->
       <class name="com.example.tests.ContactCreationTests">
-        <test-method status="FAIL" signature="testContactData()[pri:0, instance:com.example.tests.ContactCreationTests@87c06e0]" name="testContactData" duration-ms="3" started-at="2014-03-17T00:10:16Z" finished-at="2014-03-17T00:10:16Z">
+        <test-method status="FAIL" signature="testContactData()[pri:0, instance:com.example.tests.ContactCreationTests@6a7607a]" name="testContactData" duration-ms="3" started-at="2014-03-17T09:24:33Z" finished-at="2014-03-17T09:24:33Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
