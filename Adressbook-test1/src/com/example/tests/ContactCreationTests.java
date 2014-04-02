@@ -5,11 +5,23 @@ import org.testng.annotations.Test;
 public class ContactCreationTests extends TestBase{
   @Test
   public void testContactData() throws Exception {
-    app.NavigationHelper.openMainPage();
-    app.ContactHelper.openContactsPage();
-    ContactData contact = new ContactData("Kolya1", "CC", "Kiev", "02", "03", "056", "12/May/1977", "mail1", "mail22", "Rob", "Dnepr", "05662" );
-   	app.ContactHelper.fillContacForm(app, this, contact);
-   	app.ContactHelper.submitContactCreation();
-    app.ContactHelper.returnToHomePage();
+    app.getNavigationHelper().openMainPage();
+    app.getContactHelper().openContactsPage();
+    ContactData contact = new ContactData();
+    contact.firstname = "Alex";
+	contact.secondname = "Petrenko";
+	contact.address = "Dnepr";
+	contact.homePhone = "05662";
+	contact.mobilePhone = "066578";
+	contact.workPhone = "0562";
+	contact.firstEmail = "mail1";
+	contact.secondEmail = "mail2";
+	contact.birthday = "12/May/1977";
+	contact.yourGroup = "Rob";
+	contact.secondaryAdress = "Nikopol";
+	contact.secondaryPhone = "0566222";
+    app.getContactHelper().fillContacForm(contact);
+   	app.getContactHelper().submitContactCreation();
+    app.getContactHelper().returnToHomePage();
   }
 }
