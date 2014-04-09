@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 
 import com.example.tests.ContactData;
-import com.example.tests.TestBase;
 
 public class ContactHelper extends HelperBase{
 
@@ -14,18 +13,6 @@ public class ContactHelper extends HelperBase{
 
 	public void openContactsPage() {
 		click(By.linkText("add new"));
-	}
-
-	public void selectYourGroup(ApplicationManager applicationManager, TestBase testBase, ContactData contact) {
-		new Select(driver.findElement(By.name("new_group"))).selectByVisibleText(contact.yourGroup);
-	}
-
-	public void selectBirthday(ApplicationManager applicationManager, TestBase testBase, ContactData contact) {
-		String[] parts = contact.birthday.split("/");
-		new Select(driver.findElement(By.name("bday"))).selectByVisibleText(parts[0]);
-	    new Select(driver.findElement(By.name("bmonth"))).selectByVisibleText(parts[1]);
-	    driver.findElement(By.name("byear")).clear();
-	    driver.findElement(By.name("byear")).sendKeys(parts[2]);
 	}
 
 	
@@ -38,8 +25,14 @@ public class ContactHelper extends HelperBase{
 	    type(By.name("work"), contact.workPhone);
 	    type(By.name("email"), contact.firstEmail);
 	    type(By.name("email2"), contact.secondEmail);
+	    new Select(driver.findElement(By.name("bday"))).selectByVisibleText(contact.bDay);
+	    new Select(driver.findElement(By.name("bmonth"))).selectByVisibleText(contact.bMonth);
+	    driver.findElement(By.name("byear")).clear();
+	    driver.findElement(By.name("byear")).sendKeys(contact.bYear);
+	    new Select(driver.findElement(By.name("new_group"))).selectByVisibleText(contact.groupName);
 	    type(By.name("address2"), contact.secondaryAdress);
 	    type(By.name("phone2"), contact.secondaryPhone);
+	    
 	    
 	}
 

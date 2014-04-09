@@ -9,10 +9,13 @@ public class ContactData {
 	public String workPhone;
 	public String firstEmail;
 	public String secondEmail;
-	public String birthday;
-	public String yourGroup;
+	public String bDay;
+	public String bMonth;
+	public String bYear;
+	public String groupName;
 	public String secondaryAdress;
 	public String secondaryPhone;
+	
 	
 	
 	public ContactData() {
@@ -20,7 +23,8 @@ public class ContactData {
 	}
 		
 	public ContactData(String firstname, String secondname, String address, String homePhone, String mobilePhone, String workPhone,
-		String firstEmail, String secondEmail, String birthday, String yourGroup, String secondaryAdress, String secondaryPhone) 
+		String firstEmail, String secondEmail, String bDay, String bMonth, String bYear, String groupName, 
+		String yourGroup , String secondaryAdress, String secondaryPhone) 
 	{
 		this.firstname = firstname;
 		this.secondname = secondname;
@@ -30,10 +34,13 @@ public class ContactData {
 		this.workPhone = workPhone;
 		this.firstEmail = firstEmail;
 		this.secondEmail = secondEmail;
-		this.birthday = birthday;
-		this.yourGroup = yourGroup;
+		this.bDay = bDay;
+		this.bMonth = bMonth;
+		this.bYear = bYear;
+		this.groupName = groupName;
 		this.secondaryAdress = secondaryAdress;
 		this.secondaryPhone = secondaryPhone;
+		
 		
 	}
 
