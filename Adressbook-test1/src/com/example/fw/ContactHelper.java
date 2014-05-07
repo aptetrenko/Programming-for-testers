@@ -2,13 +2,11 @@ package com.example.fw;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-
 import com.example.tests.ContactData;
-import com.example.tests.GroupData;
+
 
 public class ContactHelper extends HelperBase{
 
@@ -79,16 +77,21 @@ public class ContactHelper extends HelperBase{
 	}
 
 	public List<ContactData> getContacts() {
-		List<ContactData> contacts = new ArrayList<ContactData>();
-		List<WebElement> checkboxes = driver.findElements(By.name("selected[]"));
-		for (WebElement checkbox : checkboxes) {
-			ContactData contact = new ContactData();
-			String title = checkbox.getAttribute("title");
-			contact.firstname = title.substring("Select (".length(), title.length() - ")".length());
-			contacts.add(contact);
-		}
-		return null;
-	}
+		 		List<ContactData> contacts = new ArrayList<ContactData>();
+				List<WebElement> checkboxes = manager.driver.findElements(By.name("selected[]"));
+
+				for (int i = 0; i < checkboxes.size(); i++) {
+					ContactData tempContact = new ContactData();
+					tempContact.firstname = manager.driver.findElement(
+							By.xpath(".//*[@id='maintable']/tbody/tr[" + (i + 2)
+									+ "]/td[2]")).getText();
+					tempContact.secondname = manager.driver.findElement(
+							By.xpath(".//*[@id='maintable']/tbody/tr[" + (i + 2)
+									+ "]/td[3]")).getText();
+					contacts.add(tempContact);
+				}
+		 		return contacts;
+		 	}
 	
 	
 }

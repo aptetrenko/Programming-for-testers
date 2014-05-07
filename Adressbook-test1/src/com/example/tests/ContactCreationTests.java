@@ -12,17 +12,17 @@ public class ContactCreationTests extends TestBase{
   @Test
   public void testContactData() throws Exception {
     app.getNavigationHelper().openMainPage();
-    app.getContactHelper().openContactsPage();
+    
     
     //save old state contacts
     List<ContactData> oldList = app.getContactHelper().getContacts();
-    
+    app.getContactHelper().openContactsPage();
     
     //action
     
     ContactData contact = new ContactData();
     contact.firstname = "Alex1234";
-	contact.secondname = "Petrenko123";
+	contact.secondname = "Test";
 	contact.address = "Dnepr123";
 	contact.homePhone = "05662";
 	contact.mobilePhone = "066578";
@@ -47,7 +47,6 @@ public class ContactCreationTests extends TestBase{
      oldList.add(contact);
      Collections.sort(oldList);
      assertEquals(newList, oldList);
-    
     
   }
 }
